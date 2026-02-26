@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Search | Gaurav Raj Singh</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+</head>
+<body>
+
+    <div class="navbar-wrapper">
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="index.html">
+                    <img src="assets/images/logo.svg" alt="Home" class="profile-pic">
+                </a>
+                <a href="index.html" class="mobile-nav-title">Gaurav</a>
+                
+                <div class="nav-tabs desktop-only">
+                    <a href="works.html" class="nav-tab">Works</a>
+                    <a href="blog.html" class="nav-tab">Blog</a>
+                    <a href="contact.html" class="nav-tab">Contact</a>
+                </div>
+            </div>
+            
+            <div class="nav-links desktop-only">
+                <button class="nav-btn" onclick="toggleTheme()" title="Switch Theme">
+                    <div class="theme-icon-container" id="theme-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    </div>
+                    <span>Theme</span>
+                </button>
+            </div>
+
+            <button class="mobile-menu-btn mobile-only" onclick="toggleMobileMenu()">
+                <div class="dots-container">
+                    <span class="dot-menu"></span><span class="dot-menu"></span><span class="dot-menu"></span>
+                </div>
+            </button>
+        </nav>
+
+        <div class="mobile-menu-overlay" id="mobile-menu">
+            <a href="works.html" class="mobile-menu-link">Works</a>
+            <a href="blog.html" class="mobile-menu-link">Blog</a>
+            <a href="contact.html" class="mobile-menu-link">Contact</a>
+        </div>
+    </div>
+
+    <main class="view-section active">
+        <div class="blog-container">
+            <header class="blog-header animate-on-scroll">
+                <h1 class="hero-title" style="margin-bottom: 1.5rem;">Search</h1>
+                <p class="blog-meta">Find specific case studies, tutorials, and thoughts.</p>
+                
+                <div style="margin-top: 2rem; position: relative;">
+                    <input type="text" id="search-input" class="form-control" placeholder="Type to search..." style="padding-left: 3rem; font-size: 1.15rem;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%);">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </div>
+            </header>
+            
+            <div id="search-results-grid" class="works-grid">
+                </div>
+            
+            <div id="no-results-msg" style="display: none; text-align: center; padding: 3rem 0; color: var(--text-muted);">
+                <p style="font-size: 1.15rem;">No results found. Try a different keyword!</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer" style="margin-top: auto; border-top: 1px solid var(--border-color); padding-top: 3rem; text-align: center;">
+        <p style="color: var(--text-muted); font-size: 0.95rem;">&copy; 2026 Gaurav Raj Singh. Crafted with purpose.</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

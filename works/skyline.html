@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Skyline Project | Gaurav Raj Singh</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-hehehe"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-hehehe');
+    </script>
+
+</head>
+<body>
+
+    <div class="navbar-wrapper">
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="../index.html">
+                    <img src="../assets/images/logo.svg" alt="Home" class="profile-pic">
+                </a>
+                <a href="../index.html" class="mobile-nav-title">Gaurav</a>
+                
+                <div class="nav-tabs desktop-only">
+                    <a href="../works.html" class="nav-tab active">Works</a>
+                    <a href="#" target="_blank" class="nav-tab">CV</a>
+                    <a href="../blog.html" class="nav-tab">Blog</a>
+                    <a href="../contact.html" class="nav-tab">Contact</a>
+                </div>
+            </div>
+            
+            <div class="nav-links desktop-only">
+                <button class="nav-btn" onclick="toggleTheme()" title="Switch Theme">
+                    <div class="theme-icon-container" id="theme-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    </div>
+                    <span>Theme</span>
+                </button>
+            </div>
+
+            <button class="mobile-menu-btn mobile-only" onclick="toggleMobileMenu()">
+                <div class="dots-container">
+                    <span class="dot-menu"></span><span class="dot-menu"></span><span class="dot-menu"></span>
+                </div>
+            </button>
+        </nav>
+
+        <div class="mobile-menu-overlay" id="mobile-menu">
+            <a href="../works.html" class="mobile-menu-link active">Works</a>
+            <a href="#" target="_blank" class="mobile-menu-link">Resume / CV</a>
+            <a href="../blog.html" class="mobile-menu-link">Blog</a>
+            <a href="../contact.html" class="mobile-menu-link">Contact</a>
+        </div>
+    </div>
+
+    <main class="view-section active">
+        <div class="project-container">
+            <a href="../works.html" class="back-btn">&larr; Back to Works</a>
+            
+            <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1.5rem;">
+                <span class="work-tag">Generative</span>
+            </div>
+            
+            <h1 class="hero-title" style="margin-bottom: 1.5rem;">Skyline</h1>
+            <p style="font-size: 1.25rem; color: var(--text-muted); max-width: 650px; line-height: 1.7;">
+                Exploring architectural forms through AI generated topographies.
+            </p>
+            
+            <img class="detail-hero-img animate-on-scroll" src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1600&auto=format&fit=crop" alt="Project Hero Image">
+
+            <div class="animate-on-scroll" style="padding-bottom: 5rem; transition-delay: 0.2s;">
+                <h3 style="margin-bottom: 1.2rem; font-size: 1.6rem; font-weight: 600; letter-spacing: -0.02em;">About the Project</h3>
+                
+                <p style="color: var(--text-muted); line-height: 1.9; font-size: 1.15rem; margin-bottom: 3.5rem;">
+                    Skyline is an experimental project blending procedural generation with traditional design tools. The goal was to visualize impossible terrains and massive architectural concepts using a mix of Python scripting and Midjourney rendering.
+                </p>
+                
+                <h3 style="margin-bottom: 1.2rem; font-size: 1.3rem; font-weight: 500;">Tools & Technologies</h3>
+                <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+                    <span class="inline-pill">Midjourney</span>
+                    <span class="inline-pill">Python</span>
+                    <span class="inline-pill">Figma</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer" style="margin-top: 4rem; border-top: 1px solid var(--border-color); padding-top: 3rem; text-align: center;">
+        <p style="color: var(--text-muted); font-size: 0.95rem;">&copy; 2026 Gaurav Raj Singh. Crafted with purpose.</p>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

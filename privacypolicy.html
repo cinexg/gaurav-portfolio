@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Privacy Policy | Gaurav Raj Singh</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    </head>
+<body>
+
+    <div class="navbar-wrapper">
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="index.html">
+                    <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=150&auto=format&fit=crop" alt="Home" class="profile-pic">
+                </a>
+                <a href="index.html" class="mobile-nav-title">Gaurav</a>
+                
+                <div class="nav-tabs desktop-only">
+                    <a href="works.html" class="nav-tab">Works</a>
+                    <a href="blog.html" class="nav-tab">Blog</a>
+                    <a href="contact.html" class="nav-tab">Contact</a>
+                </div>
+            </div>
+            
+            <div class="nav-links desktop-only">
+                <button class="nav-btn" onclick="toggleTheme()" title="Switch Theme">
+                    <div class="theme-icon-container" id="theme-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    </div>
+                    <span>Theme</span>
+                </button>
+            </div>
+
+            <button class="mobile-menu-btn mobile-only" onclick="toggleMobileMenu()">
+                <div class="dots-container">
+                    <span class="dot-menu"></span><span class="dot-menu"></span><span class="dot-menu"></span>
+                </div>
+            </button>
+        </nav>
+
+        <div class="mobile-menu-overlay" id="mobile-menu">
+            <a href="works.html" class="mobile-menu-link">Works</a>
+            <a href="blog.html" class="mobile-menu-link">Blog</a>
+            <a href="contact.html" class="mobile-menu-link">Contact</a>
+            <div style="height: 1px; background: var(--border-color); margin: 0.5rem 0;"></div>
+            <span class="mobile-menu-link" onclick="toggleTheme(); toggleMobileMenu()">
+                Toggle Theme
+                <div class="theme-icon-container" id="mobile-theme-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </div>
+            </span>
+        </div>
+    </div>
+
+    <main class="view-section active">
+        <div class="blog-container">
+            <header class="blog-header animate-on-scroll">
+                <h1 class="hero-title">Privacy Policy</h1>
+                <p class="blog-meta">Effective Date: February 2026</p>
+            </header>
+            
+            <article class="blog-content animate-on-scroll">
+                <h3>1. Information We Collect</h3>
+                <p>When you use the contact form on our website, we collect the personal information you provide, specifically your <strong>Name</strong> and <strong>Email Address</strong>. We also use <strong>Google Analytics</strong> to collect non-personal data such as your IP address, browser type, and pages visited.</p>
+
+                <h3>2. How We Use Your Information</h3>
+                <p>The personal information you provide via the contact form is used solely to respond to your inquiries. We do not use this information for marketing newsletters unless you explicitly opt-in. Analytics data is used to improve website performance and user experience.</p>
+
+                <h3>3. Third-Party Services</h3>
+                <p>We use <strong>Formspree</strong> to process form submissions. Your data is securely transmitted to their servers. We also use <strong>Google Analytics</strong> for traffic reporting. Each of these services has its own privacy policy.</p>
+
+                <h3>4. Data Protection</h3>
+                <p>We take reasonable measures to protect your information from unauthorized access or disclosure. However, no method of transmission over the internet is 100% secure.</p>
+
+                <h3>5. Your Rights</h3>
+                <p>You may request to have your personal data deleted at any time by contacting us directly through the email provided on this website.</p>
+            </article>
+        </div>
+    </main>
+
+    <footer class="site-footer" style="text-align: center; padding: 3rem;">
+        <p style="color: var(--text-muted);">&copy; 2026 Gaurav Raj Singh.</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
