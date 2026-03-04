@@ -30,9 +30,11 @@ export default function Navbar() {
         <div className="flex items-center gap-6">
           <Magnetic>
             <Link href="/">
-              <div className="w-11 h-11 bg-gray-200 dark:bg-gray-800 rounded-full flex items-center justify-center font-serif italic font-bold border border-[var(--border-color)] hover:scale-105 transition-transform">
-                G
-              </div>
+                <img 
+                src="/images/logo.svg" 
+                alt="Gaurav Logo" 
+                className="w-11 h-11 rounded-full object-cover border border-[var(--border-color)] bg-[var(--surface-color)] hover:scale-105 transition-transform" 
+                />
             </Link>
           </Magnetic>
 

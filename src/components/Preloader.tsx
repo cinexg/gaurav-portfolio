@@ -59,7 +59,7 @@ export default function Preloader() {
               initial={{ opacity: 0, filter: "blur(10px)", y: 10 }}
               animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="font-serif italic text-4xl md:text-5xl text-[var(--text-main)] tracking-tight"
+              className="font-sans font-bold text-4xl md:text-5xl text-[var(--text-main)] tracking-tighter"
             >
               {getLoadingText()}
             </motion.span>

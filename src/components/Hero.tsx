@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+// 1. Import 'Variants' from framer-motion
+import { motion, Variants } from "framer-motion"; 
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
@@ -11,7 +12,8 @@ export default function Hero() {
 
   useEffect(() => setMounted(true), []);
 
-  const containerVariants = {
+  // 2. Explicitly type your variants
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
@@ -19,7 +21,7 @@ export default function Hero() {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 40 },
     show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 300, damping: 24 } },
   };

@@ -28,7 +28,7 @@ export default function Pinboard() {
         </span>
         
         <h2 className="text-[clamp(1.8rem,4vw,3.4rem)] font-medium tracking-tight leading-[1.1] mb-8 text-[var(--text-main)] max-w-[800px]">
-          Turning creative chaos into <em className="font-serif italic font-normal">consistent</em> design.
+          Turning creative chaos into <span className="font-bold">consistent</span> design.
         </h2>
         
         <div className="space-y-4 text-[1.15rem] text-[var(--text-muted)] leading-[1.7] max-w-[650px]">
@@ -38,9 +38,9 @@ export default function Pinboard() {
         </div>
         
         <div className="flex items-center gap-5 mt-14">
-          <div className="w-12 h-12 rounded-full border border-[var(--border-color)] bg-[var(--surface-color)] flex items-center justify-center overflow-hidden shrink-0">
-             <div className="font-serif italic font-bold">G</div>
-          </div>
+            <div className="w-12 h-12 rounded-full border border-[var(--border-color)] bg-[var(--surface-color)] flex items-center justify-center overflow-hidden shrink-0">
+            <img src="/images/logo.svg" alt="Gaurav Signature" className="w-full h-full object-cover" />
+            </div>
           <span className="font-serif italic font-semibold text-[1.2rem]">Gaurav</span>
         </div>
       </motion.div>

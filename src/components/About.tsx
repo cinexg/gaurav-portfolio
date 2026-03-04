@@ -28,7 +28,11 @@ const SocialPopover = ({ icon, handle, text, metrics, link }: any) => {
         className="absolute bottom-[calc(100%+15px)] left-1/2 -translate-x-1/2 w-[320px] bg-[var(--surface-color)] border border-[var(--border-color)] rounded-2xl shadow-2xl p-5 z-50 text-left font-sans text-[var(--text-main)] cursor-default"
       >
         <div className="flex items-center gap-3 mb-3">
-          <div className="w-11 h-11 rounded-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center font-serif italic font-bold text-lg border border-[var(--border-color)]">G</div>
+            <img 
+            src="/images/logo.svg" 
+            alt="Gaurav" 
+            className="w-11 h-11 rounded-full object-cover border border-[var(--border-color)] bg-[var(--surface-color)]" 
+            />
           <div className="flex flex-col leading-tight">
             <strong className="text-[0.95rem] font-semibold">Gaurav Raj Singh</strong>
             <span className="text-[0.85rem] text-[var(--text-muted)]">{handle}</span>
