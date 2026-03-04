@@ -1,26 +1,61 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --bg-color: #FAFAFA;
+    --surface-color: #FFFFFF;
+    --text-main: #111111;
+    --text-muted: #666666;
+    --border-color: rgba(0, 0, 0, 0.06);
+    --hover-bg: rgba(0, 0, 0, 0.04);
+    --pill-bg: rgba(0, 0, 0, 0.04);
+    --nav-bg: rgba(255, 255, 255, 0.75);
+    --pinboard-bg: #F5F4F0;
+    --nav-tab-active-bg: #EAEAEA;
+    --nav-tab-active-text: #111111;
+    --shadow-sm: 0 4px 24px rgba(0, 0, 0, 0.03);
+    --shadow-md: 0 12px 40px rgba(0, 0, 0, 0.06);
+  }
+
+  .dark {
+    --bg-color: #050505;
+    --surface-color: #0d0d0d;
+    --text-main: #F3F3F3;
+    --text-muted: #999999;
+    --border-color: rgba(255, 255, 255, 0.08);
+    --hover-bg: rgba(255, 255, 255, 0.06);
+    --pill-bg: rgba(255, 255, 255, 0.06);
+    --nav-bg: rgba(10, 10, 10, 0.75);
+    --pinboard-bg: #0f0f0f;
+    --nav-tab-active-bg: #222222;
+    --nav-tab-active-text: #FFFFFF;
+    --shadow-sm: 0 4px 24px rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 12px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  body {
+    @apply bg-[var(--bg-color)] text-[var(--text-main)] antialiased transition-colors duration-500 selection:bg-[var(--text-main)] selection:text-[var(--bg-color)];
+    /* Hide scrollbar for cleaner look */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Custom Cursor Base */
+  @media (pointer: fine) {
+    body {
+      cursor: none;
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .glass-card {
+    @apply bg-[var(--surface-color)] border border-[var(--border-color)] rounded-[20px] shadow-[var(--shadow-sm)] relative overflow-hidden transition-all duration-300;
+  }
 }
