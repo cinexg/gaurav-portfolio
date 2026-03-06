@@ -31,7 +31,7 @@ export default function Navbar() {
           <Magnetic>
             <Link href="/">
                 <img 
-                src="/images/logo.svg" 
+                src="logo.svg" 
                 alt="Gaurav Logo" 
                 className="w-11 h-11 rounded-full object-cover border border-[var(--border-color)] bg-[var(--surface-color)] hover:scale-105 transition-transform" 
                 />

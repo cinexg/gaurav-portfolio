@@ -76,7 +76,7 @@ export default function Hero() {
       <motion.div variants={itemVariants} className="flex-[0.8] flex justify-center md:justify-end relative z-[1] md:-translate-y-[8%] w-full">
         <div className="relative w-full max-w-[380px] aspect-square md:aspect-[4/5.5] md:[mask-image:linear-gradient(to_bottom,rgba(0,0,0,1)_50%,rgba(0,0,0,0)_100%)]">
           <img 
-            src={mounted && theme === "dark" ? "/images/hero-abstract-dark.svg" : "/images/hero-abstract.svg"} 
+            src={mounted && theme === "dark" ? "hero-abstract-dark.svg" : "/hero-abstract.svg"} 
             alt="Abstract Artwork" 
             className="w-full h-full object-cover rounded-[24px] transition-all duration-500" 
           />
