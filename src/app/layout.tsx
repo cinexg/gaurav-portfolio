@@ -16,6 +16,9 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 export const metadata: Metadata = {
   title: "Gaurav Raj Singh | Portfolio",
   description: "Creative Developer & Designer building cool things with discipline.",
+  icons: {
+    icon: "logo-circular.svg",
+  },
 };
 
 export default function RootLayout({
