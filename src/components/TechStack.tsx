@@ -30,10 +30,17 @@ export default function TechStack() {
           >
             <div className="flex items-center gap-5 group-hover:translate-x-2 transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]">
               <div 
-                className="w-12 h-12 rounded-full flex items-center justify-center text-[1.3rem] shrink-0 shadow-sm"
-                style={{ backgroundColor: item.bg, color: item.color }}
+                className="w-12 h-12 rounded-full flex items-center justify-center shrink-0 shadow-sm"
+                style={{ backgroundColor: item.bg }}
               >
-                {item.icon}
+                {/* This is the fix: We are now rendering an image 
+                  instead of raw text. 
+                */}
+                <img 
+                  src={item.icon} 
+                  alt={`${item.name} logo`} 
+                  className="w-6 h-6 object-contain"
+                />
               </div>
               <div className="flex flex-col">
                 <span className="font-semibold text-[1rem] tracking-tight">{item.name}</span>

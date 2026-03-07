@@ -20,7 +20,7 @@ export default function Pinboard() {
         className="bg-[#F5F4F0] dark:bg-[#0f0f0f] border border-[var(--border-color)] rounded-[28px] p-8 md:p-16 relative max-w-5xl mx-auto transition-colors duration-500"
       >
         <div className="absolute -top-7 -right-7 md:-top-7 md:-right-7 w-16 h-16 md:w-[72px] md:h-[72px] border-4 md:border-[6px] border-[var(--bg-color)] rounded-[20px] shadow-lg overflow-hidden bg-[var(--surface-color)] flex items-center justify-center">
-          <img src="/images/logo.svg" alt="Avatar" className="w-full h-full object-cover" />
+          <img src="logo.svg" alt="Avatar" className="w-full h-full object-cover" />
         </div>
 
         <span className="inline-block px-3 py-1 bg-[var(--pill-bg)] text-[var(--text-muted)] text-[0.8rem] font-medium rounded-full mb-8">
@@ -39,7 +39,7 @@ export default function Pinboard() {
         
         <div className="flex items-center gap-5 mt-14">
             <div className="w-12 h-12 rounded-full border border-[var(--border-color)] bg-[var(--surface-color)] flex items-center justify-center overflow-hidden shrink-0">
-            <img src="/images/logo.svg" alt="Gaurav Signature" className="w-full h-full object-cover" />
+            <img src="logo.svg" alt="Gaurav Signature" className="w-full h-full object-cover" />
             </div>
           <span className="font-serif italic font-semibold text-[1.2rem]">Gaurav</span>
         </div>

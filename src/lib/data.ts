@@ -10,14 +10,14 @@ export const myProjects = [
 ];
 
 export const myStack = [
-  { name: "Midjourney", desc: "AI Generation", icon: "🎨", bg: "#e8f0fe", color: "#1a73e8", url: "https://midjourney.com" },
-  { name: "Framer", desc: "Website Builder", icon: "⚡", bg: "#f3f3f3", color: "#000000", url: "https://framer.com" },
-  { name: "Lemon Squeezy", desc: "Payment Platform", icon: "🍋", bg: "#fff0f5", color: "#d81b60", url: "https://lemonsqueezy.com" },
-  { name: "Figma", desc: "Design Tool", icon: "F", bg: "#fce8e6", color: "#ea4335", url: "https://figma.com" },
-  { name: "Typefully", desc: "Writer for Twitter", icon: "✍️", bg: "#e3f2fd", color: "#1976d2", url: "https://typefully.com" },
-  { name: "Linear", desc: "Project Management", icon: "L", bg: "#e8eaf6", color: "#3f51b5", url: "https://linear.app" },
-  { name: "Python", desc: "Logic & Backend", icon: "🐍", bg: "#e8f5e9", color: "#388e3c", url: "https://python.org" },
-  { name: "Webflow", desc: "Visual Development", icon: "W", bg: "#e1f5fe", color: "#03a9f4", url: "https://webflow.com" }
+  { name: "Python", desc: "Backend & Data Science", icon: "https://cdn.simpleicons.org/python/3776AB", bg: "#e8f5e9", color: "#3776AB", url: "https://python.org" },
+  { name: "JavaScript", desc: "Web Interactivity", icon: "https://cdn.simpleicons.org/javascript/F7DF1E", bg: "#fffde7", color: "#b39e00", url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+  { name: "Next.js", desc: "React Framework", icon: "https://cdn.simpleicons.org/nextdotjs/000000", bg: "#f3f3f3", color: "#000000", url: "https://nextjs.org" },
+  { name: "SQL", desc: "Database Management", icon: "https://cdn.simpleicons.org/postgresql/4169E1", bg: "#e0f7fa", color: "#4169E1", url: "https://en.wikipedia.org/wiki/SQL" },
+  { name: "n8n", desc: "Workflow Automation", icon: "https://cdn.simpleicons.org/n8n/EA4A47", bg: "#ffeeeb", color: "#EA4A47", url: "https://n8n.io" },
+  { name: "Premiere Pro", desc: "Content Creation", icon: "https://cdn.simpleicons.org/adobepremierepro/9999FF", bg: "#ede7f6", color: "#673ab7", url: "https://www.adobe.com/products/premiere.html" },
+  { name: "Illustrator", desc: "Vector Graphics", icon: "https://cdn.simpleicons.org/adobeillustrator/FF9A00", bg: "#fff3e0", color: "#e65100", url: "https://www.adobe.com/products/illustrator.html" },
+  { name: "Photoshop", desc: "Graphic Design", icon: "https://cdn.simpleicons.org/adobephotoshop/31A8FF", bg: "#e1f5fe", color: "#0288d1", url: "https://www.adobe.com/products/photoshop.html" }
 ];
 
 export const myBlogs = [
