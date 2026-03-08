@@ -6,6 +6,7 @@ import { motion, useMotionValue, useSpring } from "framer-motion";
 export default function CustomCursor() {
   const [isVisible, setIsVisible] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
+  const [isHolding, setIsHolding] = useState(false); // New state for click/drag
 
   // Motion values for instant tracking
   const cursorX = useMotionValue(-100);
@@ -42,16 +43,29 @@ export default function CustomCursor() {
       }
     };
 
+    // Handlers for Click/Hold/Drag visuals
+    const handleMouseDown = () => setIsHolding(true);
+    const handleMouseUp = () => setIsHolding(false);
+
     window.addEventListener("mousemove", moveCursor);
     window.addEventListener("mouseover", handleMouseOver);
+    window.addEventListener("mousedown", handleMouseDown);
+    window.addEventListener("mouseup", handleMouseUp);
 
     return () => {
       window.removeEventListener("mousemove", moveCursor);
       window.removeEventListener("mouseover", handleMouseOver);
+      window.removeEventListener("mousedown", handleMouseDown);
+      window.removeEventListener("mouseup", handleMouseUp);
     };
   }, [cursorX, cursorY]);
 
   if (!isVisible) return null;
+
+  // Calculate dynamic size based on current action
+  // Holding takes precedence to simulate a "grab" or "pinch" effect
+  const ringSize = isHolding ? 24 : isHovering ? 50 : 36;
+  const ringOffset = -ringSize / 2;
 
   return (
     <>
@@ -59,7 +73,10 @@ export default function CustomCursor() {
       <motion.div
         className="fixed top-0 left-0 w-1.5 h-1.5 bg-[var(--text-main)] rounded-full pointer-events-none z-[9999] -ml-[3px] -mt-[3px]"
         style={{ x: cursorX, y: cursorY }}
-        animate={{ opacity: isHovering ? 0 : 1 }}
+        animate={{ 
+          opacity: isHovering || isHolding ? 0 : 1,
+          scale: isHolding ? 0.5 : 1 // Shrink the dot slightly when clicking
+        }}
         transition={{ duration: 0.2 }}
       />
       
@@ -68,12 +85,13 @@ export default function CustomCursor() {
         className="fixed top-0 left-0 rounded-full pointer-events-none z-[9998] border border-gray-400/40 mix-blend-difference"
         style={{ x: followerX, y: followerY }}
         animate={{
-          width: isHovering ? 50 : 36,
-          height: isHovering ? 50 : 36,
-          marginLeft: isHovering ? -25 : -18,
-          marginTop: isHovering ? -25 : -18,
-          backgroundColor: isHovering ? "#FFFFFF" : "transparent",
-          borderColor: isHovering ? "transparent" : "rgba(150, 150, 150, 0.4)",
+          width: ringSize,
+          height: ringSize,
+          marginLeft: ringOffset,
+          marginTop: ringOffset,
+          // Fill white when grabbing or hovering
+          backgroundColor: isHovering || isHolding ? "#FFFFFF" : "transparent",
+          borderColor: isHovering || isHolding ? "transparent" : "rgba(150, 150, 150, 0.4)",
         }}
         transition={{ duration: 0.3, ease: "easeOut" }}
       />
